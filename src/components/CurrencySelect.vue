@@ -8,6 +8,7 @@
             id="basic-url" 
             aria-describedby="basic-addon3"
             v-model="inputCurrency"
+            @keyup.enter="selectCurrency"
         >
         <button class="btn btn-success"
             @click="selectCurrency"
@@ -41,9 +42,11 @@ export default {
             if(this.currencyList.hasOwnProperty(this.inputCurrency)){
                 this.currentCurrency = this.inputCurrency
                 this.$emit('changeCurrency', this.currentCurrency)
+                this.inputCurrency = ''
             }
             else{
                 alert('Wrong currency name!')
+                this.inputCurrency = ''
             }
         },
         getLocationApp(){
