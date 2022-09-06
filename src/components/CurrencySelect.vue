@@ -40,8 +40,8 @@ export default {
     methods: {
         selectCurrency(){
             if(this.currencyList.hasOwnProperty(this.inputCurrency.toUpperCase())){
-                this.currentCurrency = this.inputCurrency
-                this.$emit('changeCurrency', this.currentCurrency)
+                this.currentCurrency = this.inputCurrency.toUpperCase()
+                this.$emit('changeCurrency', this.currentCurrency.toUpperCase())
                 this.inputCurrency = ''
             }
             else{
