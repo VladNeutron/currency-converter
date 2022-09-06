@@ -73,18 +73,6 @@ export default {
       console.log(response.data);
       this.ratesList = response.data.rates;
     });
-
-    // if ( Object.keys(navigator.geolocation).length > 0 ) {
-    //     navigator.geolocation.getCurrentPosition((position) => {
-    //       console.log(position)
-    //     });
-    //   } else {
-    //     alert('Allow access to your location, to get currency for your region')
-    //   }
-
-     
-
-
     
     //В бесплатной версии API к сожалению ограничено количество запросов в месяц, в связи с этим курс получаю только один раз
     //В ином случае отправлял бы запросы через setInterval, раз в какое-то время, лиюо же при смене валют+изменении значения пользовательского инпута
